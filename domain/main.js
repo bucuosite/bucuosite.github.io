@@ -268,10 +268,11 @@ var getXNName = function()
 		window.music = new Audio('music.mp3');
 		music.play();
 	}
-
-	document.querySelector('.page1').style.backgroundImage = 'url(http://bucuo.site/domain/'+peopleName+'/1.jpg)';
-	document.querySelector('.page2').style.backgroundImage = 'url(http://bucuo.site/domain/'+peopleName+'/2.jpg)';
-	document.querySelector('.page3').style.backgroundImage = 'url(http://bucuo.site/domain/'+peopleName+'/3.jpg)';
+	
+	var enName = 'huangtingting';
+	document.querySelector('.page1').style.backgroundImage = 'url(http://bucuo.site/domain/'+enName+'/1.jpg)';
+	document.querySelector('.page2').style.backgroundImage = 'url(http://bucuo.site/domain/'+enName+'/2.jpg)';
+	document.querySelector('.page3').style.backgroundImage = 'url(http://bucuo.site/domain/'+enName+'/3.jpg)';
 	window.onload = function()
 	{
 		setTimeout(init, 1500);
