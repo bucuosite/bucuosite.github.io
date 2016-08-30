@@ -265,7 +265,7 @@ var getXNName = function()
 	}
 	function initMusic()
 	{
-		window.music = new Audio('music.mp3');
+		window.music = new Audio('http://bucuo.site/domain/music.mp3');
 		music.play();
 	}
 	
