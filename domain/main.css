@@ -729,6 +729,7 @@ body {
 #navBar li {
     cursor: pointer;
     margin-bottom: 10px;
+    -webkit-transition: all .7s ease;
     transition: all .7s ease;
     border-radius: 50%;
     line-height: 40px;
@@ -746,6 +747,7 @@ body {
     width: 80px;
     height: 80px;
     margin-left: -39px;
+    display: none;
 }
 .u-arrow p {
     position: absolute;
