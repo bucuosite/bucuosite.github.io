@@ -1,4 +1,4 @@
-﻿;(function()
+;(function()
 {
 	'use strict';
 	/** Highest positive signed 32-bit float value */
@@ -210,11 +210,9 @@ var getXNName = function()
 	var peopleName = getXNName();
 	var sampleName = '张小伟';
 	var G = function(id){return document.getElementById(id);};
+	document.title = peopleName + '我爱你';
 	function init()
 	{
-		
-		
-		document.title = peopleName + '我爱你';
 		G('target_1').setAttribute('href', 'http://'+peopleName+'.我爱你');
 		G('target_1').innerHTML = 'http://'+peopleName+'.我爱你';
 		G('target_2').innerHTML = peopleName+'.我爱你';
@@ -248,6 +246,7 @@ var getXNName = function()
 			}
 		});
 		G('loading_wrapper').style.display = 'none';
+		document.getElementsByTagName('section')[0].style.display = 'block';
 		initMusic();
 		initTongji();
 
@@ -287,7 +286,7 @@ var getXNName = function()
 	var pinyins = 
 	{
 		'黄婷婷': ['huangtingting', '08c2afd5967136ddf228cce9f56182b8'],
-		'杨丞琳': ['yangchenglin', '2222']
+		'杨丞琳': ['yangchenglin', 'c775ba6530ecd7e0d918fcbf2405da47']
 	};
 	var enName = (pinyins[peopleName] || pinyins['黄婷婷'])[0];
 	var siteId = (pinyins[peopleName] || pinyins['黄婷婷'])[1];
