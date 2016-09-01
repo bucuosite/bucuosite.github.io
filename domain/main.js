@@ -261,7 +261,13 @@ if (!String.fromCodePoint) {
 
 })();
 
-
+	function checkIsPC()
+	{
+	    var userAgent = navigator.userAgent.toLowerCase();
+	    var mobile = ["android", "iphone","windows phone"];
+	    for (var i=0; i<mobile.length; i++) if(userAgent.indexOf(mobile[i]) >= 0) return false;
+	    return true;
+	}
 
 	var getXNName = function()
 	{
@@ -269,7 +275,7 @@ if (!String.fromCodePoint) {
 		if(temp.indexOf('xn--')<0) return '黄婷婷';
 		return decodeXN(temp.replace(/^xn--/g, ''));
 	};
-
+	var isMobile = !checkIsPC();
 	var peopleName = getXNName();
 	var sampleName = '张小伟';
 	var G = function(id){return document.getElementById(id);};
@@ -298,7 +304,7 @@ if (!String.fromCodePoint) {
 				{
 					translate : 'Y',					   // 'X'|'Y'|'XY'|'none'
 					scale : [.1, 1],					   // [scalefrom, scavaro]
-					rotate : [270, 0]					   // [rotatefrom, rotateto]
+					rotate : [isMobile?0:270, 0]					   // [rotatefrom, rotateto]
 				},
 				opacity : [0, 1]                           // [opacityfrom, opacityto]
 			},
