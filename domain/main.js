@@ -337,7 +337,9 @@ if (!String.fromCodePoint) {
 	}
 	function initMusic()
 	{
-		window.music = new Audio('http://bucuo.site/domain/music.mp3');
+		var url = 'http://bucuo.site/domain/music.mp3';
+		url = 'http://7xnzpx.com1.z0.glb.clouddn.com/audio/music.mp3';
+		window.music = new Audio(url);
 		music.loop=true;
 		music.play();
 	}
