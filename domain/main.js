@@ -263,28 +263,29 @@ if (!String.fromCodePoint) {
 
 
 
-var getXNName = function()
-{
-	var temp = location.href.split('.')[0].replace(/^http:\/\//g, '');
-	if(temp.indexOf('xn--')<0) return '黄婷婷';
-	return decodeXN(temp.replace(/^xn--/g, ''));
-};
+	var getXNName = function()
+	{
+		var temp = location.href.split('.')[0].replace(/^http:\/\//g, '');
+		if(temp.indexOf('xn--')<0) return '黄婷婷';
+		return decodeXN(temp.replace(/^xn--/g, ''));
+	};
 
 	var peopleName = getXNName();
 	var sampleName = '张小伟';
 	var G = function(id){return document.getElementById(id);};
 	document.title = peopleName + '我爱你';
+	G('target_1').setAttribute('href', 'http://'+peopleName+'.我爱你');
+	G('target_1').innerHTML = 'http://'+peopleName+'.我爱你';
+	G('target_2').innerHTML = peopleName+'.我爱你';
+	G('target_3').innerHTML = peopleName;
+	G('target_4').innerHTML = peopleName;
+	G('target_5').innerHTML = peopleName+'.我爱你';
+	G('target_6').setAttribute('href', 'https://wanwang.aliyun.com/nametrade/detail/online.html?domainName='+encodeURI(peopleName+'.我爱你'));
+	G('sample_1').innerHTML = sampleName;
+	G('sample_2').innerHTML = '--'+sampleName + '宣';
+	
 	function init()
 	{
-		G('target_1').setAttribute('href', 'http://'+peopleName+'.我爱你');
-		G('target_1').innerHTML = 'http://'+peopleName+'.我爱你';
-		G('target_2').innerHTML = peopleName+'.我爱你';
-		G('target_3').innerHTML = peopleName;
-		G('target_4').innerHTML = peopleName;
-		G('target_5').innerHTML = peopleName+'.我爱你';
-		G('target_6').setAttribute('href', 'https://wanwang.aliyun.com/nametrade/detail/online.html?domainName='+encodeURI(peopleName+'.我爱你'));
-		G('sample_1').innerHTML = sampleName;
-		G('sample_2').innerHTML = '--'+sampleName + '宣';
 		G('page_wrapper').style.display = 'block';
 		var runPage = new FullPage(
 		{
@@ -349,6 +350,7 @@ var getXNName = function()
 	var pinyins = 
 	{
 		'黄婷婷': ['huangtingting', '08c2afd5967136ddf228cce9f56182b8'],
+		'孙芮': ['sunsui', '49e13a28947599244b51340f131ddb46'],
 		'杨丞琳': ['yangchenglin', 'c775ba6530ecd7e0d918fcbf2405da47']
 	};
 	var enName = (pinyins[peopleName] || pinyins['黄婷婷'])[0];
