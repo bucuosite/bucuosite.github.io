@@ -338,6 +338,7 @@ if (!String.fromCodePoint) {
 
 	function initTongji()
 	{
+		if(!siteId) return; // 如果没有配置百度统计也可以直接放行
 		window._hmt = window._hmt || [];
 		(function() {
 		  var hm = document.createElement("script");
@@ -349,12 +350,16 @@ if (!String.fromCodePoint) {
 
 	var pinyins = 
 	{
-		'黄婷婷': ['huangtingting', '08c2afd5967136ddf228cce9f56182b8'],
-		'孙芮': ['sunsui', '49e13a28947599244b51340f131ddb46'],
-		'杨丞琳': ['yangchenglin', 'c775ba6530ecd7e0d918fcbf2405da47']
+		'黄婷婷': ['huangtingting', '08c2afd5967136ddf228cce9f56182b8'],//ok
+		'孙芮': ['sunrui', '49e13a28947599244b51340f131ddb46'],//ok
+		'王子文': ['wangziwen', ''],
+		'谢霆锋': ['xietingfeng', ''],
+		'王心凌': ['wangxinling', ''],
+		'杨丞琳': ['yangchenglin', 'c775ba6530ecd7e0d918fcbf2405da47'],
+		'张韶涵': ['zhangshaohan', '']
 	};
 	var enName = (pinyins[peopleName] || pinyins['黄婷婷'])[0];
-	var siteId = (pinyins[peopleName] || pinyins['黄婷婷'])[1];
+	var siteId = (pinyins[peopleName] || [])[1];
 	var tempImg = new Image();
 	tempImg.onload = function()
 	{
