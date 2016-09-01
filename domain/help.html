@@ -1,1 +1,122 @@
-1
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>购买域名配置网站傻瓜式教程</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<link rel="stylesheet" type="text/css" href="help_files/normalize_v3.0.3.css">
+	<link rel="stylesheet" type="text/css" href="help_files/blog.css">
+	<link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="help_files/jBox.css">
+	<style type="text/css">
+	p > img{display: block;margin: 0 auto;}
+	</style>
+<body >
+
+	
+
+
+
+	<section class="center_content">
+		<div class="content_wrap">
+			<div class="content article_detail">
+				
+				<div class="article_title" style="padding-top:10px;">
+					<a href="#">购买域名配置网站傻瓜式教程</a>
+				</div>
+				
+				<div id="blog-content" class="blog-content markdown-body">
+
+
+
+
+					<h1 id="xian-lai-ke-pu-yi-xie-ji-chu-zhi-shi"><a name="先来科普一些基础知识" class="reference-link"></a><span class="header-link octicon octicon-link"></span>先来科普一些基础知识</h1><p><strong>首先声明</strong>，本文是写给完全不懂电脑知识的小白科普的文章，如果你对相关知识非常了解，完全可以跳过本文，购买域名之后自己去折腾。</p>
+<p>域名，相当于就是门牌号，你要访问一个网站必须知道它的“门牌号”。</p>
+<p>有了门牌号，你得有个存放你网站的地方，然后将门牌号和这个存放地方对应起来，一个网站就可以访问了。</p>
+<p>那么，网站放哪里呢？如果你有一台自己的服务器，那当然是放到服务器上，但是对于一个普通人而言一般是不可能的，还好，市面上有很多免费存放代码的地方！<a href="http://github.com/" target="_blank">http://github.com</a> 就是这其中最好最方便的。</p>
+<h1 id="mian-fei-zeng-song-pei-zhi-hao-de-github-zhang-hao"><a name="免费赠送配置好的github账号" class="reference-link"></a><span class="header-link octicon octicon-link"></span>免费赠送配置好的github账号</h1><p>由于注册账号之后还需要配置很多一些复杂的东西，对于普通人来说可能很麻烦而且很容易出错。如果你懒，你完全可以在购买域名后联系我，我可以<strong>把我现在已经注册并配置好的github账号和密码免费赠送</strong>给你，你拿到这个账号和密码到这里登录：<a href="https://github.com/login" target="_blank">https://github.com/login</a></p>
+<p><img src="help_files/20160901_004406_225_2299.png" alt=""></p>
+<p>登录之后修改里面的index.html就可以了。</p>
+<p><img src="help_files/20160901_005548_376_8849.png" alt=""></p>
+<p>当然，如果你不放心，想自己注册一个账号来玩，没关系，我这里也写了超级详细的教程，一步步按照我这个教程来就是了。</p>
+<h1 id="zhu-ce-zhang-hao"><a name="注册账号" class="reference-link"></a><span class="header-link octicon octicon-link"></span>注册账号</h1><p>不想自己注册账号，想要我赠送账号的可以跳过本小结往后看<code>配置域名解析</code>。</p>
+<p>访问 <a href="http://github.com/" target="_blank">http://github.com</a> ，注册一个账号，假设我的账号叫 test：</p>
+<p><img src="help_files/20160831_012805_315_7563.png" alt=""></p>
+<p><img src="help_files/20160831_012911_777_5832.png" alt=""></p>
+<p><img src="help_files/20160831_012952_417_8665.png" alt=""></p>
+<p><img src="help_files/20160831_013029_382_7015.png" alt=""></p>
+<p><img src="help_files/20160831_013115_715_8622.png" alt=""></p>
+<p><img src="help_files/20160831_013236_520_7471.png" alt=""></p>
+<p><img src="help_files/20160831_013439_204_4539.png" alt=""></p>
+<p><img src="help_files/20160831_013536_317_8158.png" alt=""></p>
+<p>新建一个index.html页面，先随便填点内容，后续你要修改你的网站首页就修改这个页面就可以了。</p>
+<p><img src="help_files/20160831_013723_513_1388.png" alt=""></p>
+<p>至此，访问 <a href="http://test.github.io/" target="_blank">http://test.github.io</a> 就可以看到刚才创建的页面。</p>
+<h1 id="pei-zhi-yu-ming"><a name="配置域名" class="reference-link"></a><span class="header-link octicon octicon-link"></span>配置域名</h1><h2 id="pei-zhi-DNS-jie-xi"><a name="配置DNS解析" class="reference-link"></a><span class="header-link octicon octicon-link"></span>配置DNS解析</h2><p>正常情况下这个我已经配置好了，但是<strong>域名转让之后这个配置会失效</strong>，需要你自己重新配置。</p>
+<p>首先要知道网站IP，ping一下你的域名得到IP<code>ping 你的用户名.github.io</code>（这里的用户名就是我赠送给你的或者你自己注册的那个英文名），记录下这个IP后面会用到：</p>
+<p><img src="help_files/20160831_014915_967_4223.png" alt=""></p>
+<p>然后登录你的域名后台：<a href="http://home.console.aliyun.com/" target="_blank">http://home.console.aliyun.com</a></p>
+<p>进入云解析DNS，找到你的域名：</p>
+<p><img src="help_files/20160831_014441_657_3062.png" alt=""></p>
+<p>然后点击解析，高级设置，添加解析：</p>
+<p><img src="help_files/20160831_015308_230_2601.png" alt=""></p>
+<p>如果你是采用我赠送账号的话，到此你的域名应该已经配置好了，可以直接访问了，如果是自己注册账号呢，则还要继续后面的CNAME配置。</p>
+<h2 id="pei-zhi-CNAME"><a name="配置CNAME" class="reference-link"></a><span class="header-link octicon octicon-link"></span>配置CNAME</h2><p>完成后再回到github.com，新建一个名为CNAME的文件（如果已经有了就编辑），里面内容就填写你的域名：</p>
+<p><img src="help_files/20160831_015646_603_0287.png" alt=""></p>
+<p>如果你的域名是中文的，比如“黄婷婷.我爱你”，需要先转换一下，可以访问 <a href="http://www.cnkuai.cn/zhuanma.asp" target="_blank">这里</a>进行转码：</p>
+<p><img src="help_files/20160831_020014_324_1806.png" alt=""></p>
+<p>转码结果类似这样的：xn—b2sa7653c.xn—6qq986b3xl</p>
+<p>将这个填入CNAME文件中即可，一定要记得提交并保存哦！</p>
+<h1 id="yan-zheng-shi-fu-cheng-gong"><a name="验证是否成功" class="reference-link"></a><span class="header-link octicon octicon-link"></span>验证是否成功</h1><p>至此，不出问题应该就成功了，访问你的域名试试看有没有问题？如果有问题可能会有一两分钟的延迟。</p>
+<h1 id="wo-bu-hui-xie-wang-ye-zen-me-ban"><a name="我不会写网页怎么办" class="reference-link"></a><span class="header-link octicon octicon-link"></span>我不会写网页怎么办</h1><p>别急，要做出高大上的页面，不一定非要会写代码才行，现在有很多免费的页面生成工具，你直接用它们生成好然后把代码复制到github就可以了。</p>
+<p>比如百度推出的H5在线制作工具：</p>
+<p><a href="http://h5.baidu.com/store" target="_blank">http://h5.baidu.com/store</a></p>
+<p>你只要选择一个好看的模板然后拖拖拽拽换图片换文字就可以了。</p>
+<p><img src="help_files/20160901_010117_199_4066.png" alt=""></p>
+<p>或者你可以使用 Dreamweaver 来制作网页，也是拖拽几下就可以的，Dreamweaver下载地址：</p>
+<p><a href="http://www.downza.cn/soft/12056.html" target="_blank">http://www.downza.cn/soft/12056.html</a></p>
+<p>如果还有问题，必要的时候可以联系我QQ：252382076 ，我可以提供一些必要的协助。</p>
+
+				</div>
+				
+				
+			</div>
+		</div>
+		
+		
+	</section>
+
+
+	<script type="text/javascript" src="help_files/jquery.js"></script>
+	<script type="text/javascript" src="help_files/jBox.js"></script>
+	<script type="text/javascript" src="help_files/clipboard.js"></script>
+	<script type="text/javascript" src="help_files/blog.js"></script>
+
+
+
+	
+	<script type="text/javascript">
+	
+	
+	;(function()
+	{
+		// 自动生成文章目录
+		$('body').initMarkdownTOC($('.markdown-body'));
+		// 新标签中打开所有链接
+		$('#blog-content a[href]').attr('target', '_blank');
+		/* var html = $('.markdown-body').getMarkdownTOC();
+		var obj = $('.markdown-body .markdown-toc');
+		var next = obj.next();
+		obj.remove();
+		next.before(html); */
+	})();
+	
+	
+
+	</script>
+
+
+</body>
+</html>
