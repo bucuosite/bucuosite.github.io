@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta charset="utf-8">
 	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
 	<link rel="stylesheet" type="text/css" href="help_files/normalize_v3.0.3.css">
 	<link rel="stylesheet" type="text/css" href="help_files/blog.css">
 	<link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
@@ -98,11 +99,18 @@
 	
 	<script type="text/javascript">
 	
-	
+	function checkIsPC()
+	{
+	    var userAgent = navigator.userAgent.toLowerCase();
+	    var mobile = ["android", "iphone","windows phone"];
+	    for (var i=0; i<mobile.length; i++) if(userAgent.indexOf(mobile[i]) >= 0) return false;
+	    return true;
+	}
+
 	;(function()
 	{
 		// 自动生成文章目录
-		$('body').initMarkdownTOC($('.markdown-body'));
+		if(checkIsPC()) $('body').initMarkdownTOC($('.markdown-body'));
 		// 新标签中打开所有链接
 		$('#blog-content a[href]').attr('target', '_blank');
 		/* var html = $('.markdown-body').getMarkdownTOC();
